@@ -1,0 +1,4 @@
+# PHP Unexpected NULL Behavior When Incrementing Non-Existent Array Keys
+This code demonstrates an uncommon error in PHP related to how it handles incrementing non-existent array keys.  While seemingly straightforward,  the code's behavior may be unexpected for developers coming from other languages which might throw an error for such a scenario. This is caused by PHP's weak typing and loose handling of array accesses.
+
+The `increment_array_value` function intends to increment a value associated with a specific key in an array. If the key doesn't exist, it should be initialized to 0 and then incremented. However, without careful handling, PHP's default return of NULL for undefined keys can lead to unexpected results and subtle bugs.
